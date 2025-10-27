@@ -1,0 +1,31 @@
+# Triple Wise Attention Implementation Requirements
+
+# Core ML Framework
+torch>=2.0
+torchvision
+torchaudio
+
+# Attention and Transformers
+transformers
+flash-attn
+timm
+
+# Data Processing
+pandas
+numpy
+einops
+
+# Visualization and Logging
+matplotlib
+tensorboard
+tqdm
+
+# Configuration
+easydict
+omegaconf
+
+# Computer Vision
+opencv-python
+
+# Development and Testing
+pytest

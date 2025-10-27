@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+# coding: utf-8
+
+from easydict import EasyDict
+
+Config = EasyDict({
+    'root_dir':        '/home/tony/workspace/Loomirage',
+    'latent_dir':      '/home/tony/workspace/Loomirage/data/pre_process/X_Vid/X_Vid_latent_wan',
+    'metadata_csv':    '/home/tony/workspace/Loomirage/data/pre_process/X_Vid/X_Vid_latent_wan.csv',
+    'checkpoint_dir':  '/home/tony/workspace/Loomirage/checkpoints/autoregressive',
+    'tb_log_dir':      '/home/tony/workspace/Loomirage/runs/autoregressive',
+    'dit_refined_active': False,
+    'batch_size':      1,
+    'num_epochs':      160,
+    'lr':              1e-4,
+    'lr_rollouter': 2e-4,
+    'lr_discriminator': 2e-4,
+    'lr_valuenet': 2e-4,
+    'weight_decay':    0.01,
+    'num_workers':     6,
+    'layer_decay': 0.9,
+    'val_interval':    False,
+    'val_steps':       22 * 40 * 4 * 4,
+    'val_duration':    1,
+    'token_dim':       256,
+    'embed_dim':       256,
+    'slot_dim': 256,
+    'depth':          12,
+    'mlp_ratio':       4,
+    'num_heads':       4,
+    'blocks_per_frame':880,
+    'blocks_per_row':22,
+    'blocks_per_col':40,
+    'use_compile':     False,
+    'use_checkpoint':  False,
+    'ckpt_name':       'super_slot6.pth',
+    'use_amp':         True,
+    'slot_iters':3,
+    'rollout_epoch': 100,
+    'k_steps': 1,
+    'num_slot_pool': 8,
+    'slot_book_size': 8,
+    'generate_autoregressive': True,
+    'rope_split': (32,16,16),
+    'token_refine_steps': 3,
+    'use_triple_wise_attention': True,  # Enable triple-wise attention mechanism
+})
